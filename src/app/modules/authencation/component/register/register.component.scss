@@ -1,0 +1,89 @@
+#register{
+    width: 100%;
+    height: 100vh;
+    background: #F6F6F6;
+}
+
+.register_sub{
+    padding-top: 80px;
+    width: 1000px;
+    margin: 0 auto;
+    height: 481px;
+}
+
+.register_block{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0px 32px 74px -12px rgba(0, 0, 0, 0.75);
+}
+.register_block-form{
+    width: 50%;
+    background: #FFF;
+    overflow-y: scroll;
+}
+.register_block-form::-webkit-scrollbar {
+    width: 4px;
+}
+.register_block-form::-webkit-scrollbar-thumb {
+    background-color: #CCC;
+    border-radius: 2px;
+}
+
+
+.register_form-input{
+    margin-bottom: 15px;
+}
+
+::ng-deep .register_form-input .mat-mdc-form-field{
+    width: 100%;
+}
+
+::ng-deep .register_form-input .mdc-text-field--filled:not(.mdc-text-field--disabled){
+    background-color: transparent;
+}
+
+::ng-deep .register_form-button .mat-mdc-raised-button.mat-mdc-button-base{
+    width: 100%;
+}
+
+.register_form-button{
+    margin: 15px 0;
+}
+
+.register_block-right{
+    width: 50%;
+    position: relative;
+}
+
+.register_block-right-img{
+    height: 100%;
+}
+.login_block-right-box{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.background-opacity{
+    background-color: #0000004D;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.register_block-right .btn_login{
+    border: 1px solid #FFF;
+    color: #FFF;
+    border-radius: 8px;
+    padding: 10px 36px;
+}
