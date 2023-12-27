@@ -9,9 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './modules/authencation/component/login/login.component';
 import { RegisterComponent } from './modules/authencation/component/register/register.component';
-import { RestaurantComponent } from './modules/restaurant/restaurant.component';
-import { BannerComponent } from './layout/banner/banner.component';
 import { InformationComponent } from './layout/information/information.component';
+import { RestaurantModule } from './modules/restaurant/restaurant.module';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,6 @@ import { InformationComponent } from './layout/information/information.component
     HeaderComponent,
     LoginComponent,
     RegisterComponent,
-    RestaurantComponent,
-    BannerComponent,
     InformationComponent,
   ],
   imports: [
@@ -30,6 +27,7 @@ import { InformationComponent } from './layout/information/information.component
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    RestaurantModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

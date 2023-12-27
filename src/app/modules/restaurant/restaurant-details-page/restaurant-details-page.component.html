@@ -1,1 +1,202 @@
-<p>restaurant-details-page works!</p>
+<div class="main">
+    <div class="main_sub">
+        <div class="filter">
+            <app-filter-restaurants></app-filter-restaurants>
+        </div>
+
+        <div class="sub-title flex items-center gap-1 mb-8">
+            <p>Trang chủ</p>
+
+            <div class="flex items-center gap-1">
+                <div class="icon24">
+                    <img src="assets/image/restaurant/svg/chevron-right.svg" alt="">
+                </div>
+                <p>Nhà hàng</p>
+            </div>
+        </div>
+        <div class="detail mb-12">
+            <h1 class="detail-name">The Shells Resort & Spa Phú Quốc</h1>
+            <div class="detail-general flex">
+
+                <div class="detail-general-left flex flex-col gap-2 w-2/5">
+                    <!-- Đánh giá -->
+                    <app-reviews [start]="5.2" [review]="5"></app-reviews>
+    
+                    <div class="item-info-address flex items-start gap-2">
+                        <div class="address-icon icon24">
+                            <img src="/assets/image/restaurant/svg/directions.svg" alt="">
+                        </div>
+                        <div class="address-title elipsis1">
+                            64, Trần Hưng Đạo, Phú Quốc, Kiên Giang, Việt Nam
+                        </div>
+                    </div>
+
+                    <div class="alarm flex items-center gap-2">
+                        <div class="icon24">
+                            <img src="/assets/image/restaurant/svg/alarm.svg" alt="">
+                        </div>
+                        <span class="success-color">Đang mở cửa</span>
+                        <span>8:00 - 11:00</span>
+                    </div>
+
+                    <div class="price flex items-center gap-2 mb-8">
+                        <div class="icon24">
+                            <img src="/assets/image/restaurant/svg/coin.svg" alt="">
+                        </div>
+                        <span>50k -650k/người </span>
+                    </div>
+
+                    <div class="introduce">
+                        <div class="introduce-title text-3xl text-center font-semibold mb-6">
+                            Giới thiệu
+                        </div>
+                        <p>
+                            Đỗ xe và Wi-Fi luôn miễn phí, vì vậy quý khách có thể giữ liên lạc, 
+                            đến và đi tùy ý. Nằm ở vị trí trung tâm tại Hải Châu của Đà Nẵng, 
+                            chỗ nghỉ này đặt quý khách ở gần các điểm thu hút và tùy chọn 
+                            ăn uống thú vị. Đừng rời đi trước khi ghé thăm The Marble Mountains 
+                            nổi tiếng. Được xếp hạng 5 sao, chỗ nghỉ chất lượng cao này cho phép 
+                            khách nghỉ sử dụng mát-xa, xông khô và bồn tắm nước nóng ngay trong 
+                            khuôn viên.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="detail-general-right w-3/5 flex flex-col gap-6 items-end">
+                    <div class="flex items-center gap-10">
+                        <div class="flex items-center gap-2">
+                            <span>Chat ngay</span>
+                            <div class="icon24">
+                                <img src="/assets/image/restaurant/svg/brand-messenger.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span>Chia sẻ</span>
+                            <div class="icon24">
+                                <img src="/assets/image/restaurant/svg/share.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span>Yêu thích</span>
+                            <div class="icon24 cursor-pointer" (click)="toggleHeart()">
+                                <img *ngIf="!heart" src="/assets/image/icon/heart-broken.svg" alt="">
+                                <img *ngIf="heart" src="/assets/image/icon/heart.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6">
+                        <div class="general-right-image flex gap-6 flex-col">
+                            <div>
+                                <img src="/assets/image/restaurant/Item1.png" alt="">
+                            </div>
+                            <div>
+                                <img src="/assets/image/restaurant/Item2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="detail-general-right-image">
+                            <img src="/assets/image/restaurant/BackgroundImageLogin.png" alt="">
+                        </div>
+                    </div>
+                    <div class="more-image flex items-center gap-2 cursor-pointer w-fit">
+                        <div class="more-image-text">
+                            Xem thêm 12 bức ảnh
+                        </div>
+                        <div class="more-image-img">
+                            <img src="/assets/image/restaurant/svg/photo.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="body-left flex flex-col gap-12">
+                <!-- Tiện nghi -->
+                <div class="amenities">
+                    <div class="font-semibold text-26 mb-6">Tiện nghi</div>
+                    <div class="amenities_list flex flex-wrap">
+                        <div class="amenities-item flex flex-col items-center gap-1 border-gray" 
+                            *ngFor="let item of amenities">
+                            <div class="icon24">
+                                <img src="assets/image/icon/amenities/shopping-cart.svg" alt="">
+                            </div>
+                            <div class="amenities-item-text">Free wifi</div>
+                        </div>
+                        <!-- More amenities -->
+                        <div class="amenities-item flex flex-col items-center gap-1 more-amenities">
+                            <p>+</p>
+                            <div class="amenities-item-text">12 tiện nghi</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chính sách -->
+                <div class="policy">
+                    <div class="font-semibold text-26 mb-6">Chính sách</div>
+                    <div class="policy_content">
+                        <p>
+                            Bàn đặt của Quý khách sẽ được giữ tối đa đến giờ đã đặt, 
+                            sau thời gian này nếu quý khách không đến và không thông 
+                            báo bàn đặt tự động hủy mà không cần thông báo trước
+                        </p>
+                        <p>
+                            - Quý khách vui lòng thông báo cho Hunghabay.vn nếu điều chỉnh 
+                            số lượng khách thực tế hoặc muốn hủy bàn đặt trước ít nhất 2 tiếng để được hỗ trợ.
+                        </p>
+                        <p>
+                            - Toàn bộ chi phí phát sinh Quý khách vui lòng thỏa thuận và 
+                            thanh toán với nhà hàng tại thời điểm sử dụng dịch vụ
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div class="menu">
+                    <div class="font-semibold text-26 mb-6">Menu nhà hàng</div>
+                    <div class="menu-image flex flex-wrap gap-6">
+                        <img src="assets/image/restaurant/menu1.png" alt="">
+                        <img src="assets/image/restaurant/menu2.png" alt="" 
+                            *ngFor="let item of menu"
+                        >
+                    </div>
+                </div>
+
+                <!-- Món ăn -->
+
+                <div class="dish">
+                    <div class="font-semibold text-26 mb-6">Món ăn (30)</div>
+                    <div class="dish_list flex flex-wrap gap-6">
+                        <div class="dish_item flex flex-col gap-2" *ngFor="let dish of dishs">
+                            <div class="dish_item-sub flex flex-col gap-2 cursor-pointer">
+                                <div class="dish_item-image">
+                                    <img src="assets/image/restaurant/dish.png" alt="" class="rounded-lg">
+                                </div>
+                                <div class="dish_item-text elipsis1 text-xl">
+                                    {{dish}}
+                                </div>
+                            </div>
+                            <div class="dish_item-heart flex gap-2">
+                                <div class="icon cursor-pointer">
+                                    <img src="assets/image/icon/heart-stroke-none.svg" alt="">
+                                </div>
+                                <span class="error">12</span>
+                                <!-- <span>Thích (12)</span> -->
+                            </div>
+                            <div class="text-hover p-2">
+                                {{dish}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="body-right"></div>
+        </div>
+    </div>
+</div>
