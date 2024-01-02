@@ -11,11 +11,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
-  declarations: [
-    SnackbarComponent
-  ],
+  declarations: [SnackbarComponent],
   imports: [
     CommonModule,
     MatInputModule,
@@ -28,6 +29,9 @@ import { MatMenuModule } from '@angular/material/menu';
     MatTabsModule,
     MatSnackBarModule,
     MatMenuModule,
+    MatTooltipModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
   ],
   exports: [
     MatInputModule,
@@ -40,6 +44,9 @@ import { MatMenuModule } from '@angular/material/menu';
     MatTabsModule,
     MatSnackBarModule,
     MatMenuModule,
+    MatTooltipModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
   ],
   providers: [
     {
@@ -47,4 +54,4 @@ import { MatMenuModule } from '@angular/material/menu';
     },
   ],
 })
-export class SharedModule { }
+export class SharedModule {}

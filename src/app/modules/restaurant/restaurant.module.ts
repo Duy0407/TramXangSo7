@@ -12,6 +12,7 @@ import { ListFeaturedRestaurantsComponent } from './restaurant-home-page/list-fe
 import { NewRestaurantListComponent } from './restaurant-home-page/new-restaurant-list/new-restaurant-list.component';
 import { RestaurantsRecentlyViewedComponent } from './restaurant-home-page/restaurants-recently-viewed/restaurants-recently-viewed.component';
 import { ReviewsComponent } from './reviews/reviews.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ReviewsComponent } from './reviews/reviews.component';
   imports: [
     CommonModule,
     RestaurantRoutingModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    SharedModule
   ],
   exports: [
     BannerComponent,

@@ -113,7 +113,7 @@
             </div>
         </div>
 
-        <div class="body">
+        <div class="body flex justify-between">
             <div class="body-left flex flex-col gap-12">
                 <!-- Tiện nghi -->
                 <div class="amenities">
@@ -169,14 +169,16 @@
 
                 <div class="dish">
                     <div class="font-semibold text-26 mb-6">Món ăn (30)</div>
-                    <div class="dish_list flex flex-wrap gap-6">
+                    <div class="dish_list flex flex-wrap gap-6 mb-10">
                         <div class="dish_item flex flex-col gap-2" *ngFor="let dish of dishs">
                             <div class="dish_item-sub flex flex-col gap-2 cursor-pointer">
                                 <div class="dish_item-image">
                                     <img src="assets/image/restaurant/dish.png" alt="" class="rounded-lg">
                                 </div>
-                                <div class="dish_item-text elipsis1 text-xl">
-                                    {{dish}}
+                                <div matTooltip="{{dish}}" [matTooltipPosition]="position">
+                                    <div class="dish_item-text elipsis1 text-xl">
+                                        {{dish}}
+                                    </div>
                                 </div>
                             </div>
                             <div class="dish_item-heart flex gap-2">
@@ -186,17 +188,70 @@
                                 <span class="error">12</span>
                                 <!-- <span>Thích (12)</span> -->
                             </div>
-                            <div class="text-hover p-2">
-                                {{dish}}
-                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center cursor-pointer">
+                        <div class="more-dish">
+                            Xem thêm
                         </div>
                     </div>
                 </div>
-
             </div>
 
 
-            <div class="body-right"></div>
+            <div class="body-right">
+                <div class="type flex gap-2 mb-6">
+                    <div class="p-2 flex items-center gap-2 rounded-lg background-food w-fit">
+                        <div class="icon24">
+                            <img src="assets/image/restaurant/svg/food_1.svg" alt="">
+                        </div>
+                        <p class="warn-color">Đặt bàn</p>
+                    </div>
+                    <div class="p-2 flex items-center gap-2 rounded-lg background-delivery w-fit">
+                        <div class="icon24">
+                            <img src="assets/image/restaurant/svg/delivery.svg" alt="">
+                        </div>
+                        <p class="success-color">Giao món</p>
+                    </div>
+                    <div class="p-2 flex items-center gap-2 rounded-lg background-error w-fit">
+                        <div class="icon24">
+                            <img src="assets/image/restaurant/svg/bag.svg" alt="">
+                        </div>
+                        <p class="error-color">Lấy hàng</p>
+                    </div>
+                </div>
+                <div class="phone-number text-lg mb-3" style="color: var(--main-color);">Liên hệ nhà hàng: 0123456789</div>
+                <div class="mini-map">
+                    <img src="assets/image/map.png" alt="">   
+                </div>
+            </div>
+        </div>
+        <!-- Evaluate -->
+        <div class="evaluate">
+            <div class="evaluate-title text-3xl font-semibold mb-6">Đánh giá</div>
+            <div class="evaluate-content p-10 rounded-3xl">
+                <div class="progress flex items-center gap-16">
+                    <div class="progress-spinner relative">
+                        <svg>
+                            <circle cx="100" cy="100" r="95"/>
+                            <circle cx="100" cy="100" r="95" style="--percentage: 10;"/>
+                        </svg>
+                        <div class="progress-value absolute">
+                            <p class="text-5xl font-bold">4.2</p>
+                            <p class="text-xl">Tuyệt vời</p>
+                        </div>
+                    </div>
+                    <div class="progress-bar flex flex-col gap-4">
+                        <div class="flex items-center gap-2" *ngFor="let item of progressBar">
+                            <div class="progress-bar-title">{{item.title}}</div>
+                            <div class="progress-bar-line">
+                                <mat-progress-bar mode="determinate" value="{{item.value}}"></mat-progress-bar>
+                            </div>
+                            <div class="progress-bar-number" style="color: var(--main-color);">{{item.quantity}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

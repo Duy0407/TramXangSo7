@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TooltipPosition } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-restaurant-details-page',
@@ -27,4 +28,13 @@ export class RestaurantDetailsPageComponent implements OnInit {
     'Magarita (Nàng thơ Magarita)',
     'Combo Sliver',
   ];
+
+  public position: TooltipPosition = "below";
+  // ['after', 'before', 'above', 'below', 'left', 'right'];
+  public progressBar = [
+    {title: 'Giá cả', value: 70, quantity: 70},
+    {title: 'Dịch vụ', value: 30, quantity: 30},
+    {title: 'Không gian', value: 10, quantity: 10},
+    {title: 'Đồ ăn', value: 2, quantity: 2}, 
+  ]
 }

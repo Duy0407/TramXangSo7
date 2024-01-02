@@ -27,10 +27,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --error-color-opacity03: #F8D3D5;
     --warn-color-opacity03: #FFF7E6;
     --success-color-opacity03: #F0FBE9;
+    --gray-2: #E6E1E6;
     --gray-4: #AEAAAF;
 }
 .success-color{
     color: var(--success-color);
+}
+.warn-color{
+    color: var(--warn-color);
+}
+.error-color{
+    color: var(--error-color);
 }
 .elipsis1{
     overflow:hidden;
