@@ -1,0 +1,61 @@
+<header>
+    <div class="header flex items-center">
+        <div class="header_logo">
+            <a href="#">
+                <span class="logo_text-one">Tram Xăng Sô' </span>
+                <span class="logo_text-two">7</span>
+            </a>
+        </div>
+
+        <div class="flex items-center">
+            <ng-container *ngIf="isToken; then tokenTrue else tokenFalse"></ng-container>
+            <ng-template #tokenTrue>
+                <div class="header_icon flex pr-6">
+                    <div class="header_icon-help p-2 cursor-pointer">
+                        <span class="material-symbols-outlined">help</span>
+                    </div>
+                    <div class="header_icon-bell p-2 cursor-pointer">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </div>
+                </div>
+                <div class="info" [matMenuTriggerFor]="menu">
+                    <div class="info_img">
+                        <img src="assets/image/AvatarUserDefault.png" alt="">
+                    </div>
+                    <div class="info_icon">
+                        <img src="assets/image/restaurant/svg/IconDownInfoBlack.svg" alt="">
+                    </div>
+                </div>
+                <mat-menu #menu="matMenu">
+                    <app-information></app-information>
+                </mat-menu>
+            </ng-template>
+
+            <ng-template #tokenFalse>
+                <div class="header_btn flex">
+                    <div class="header_btn-login" (click)="redirectToLoginPage()">
+                        <button>Log In</button>
+                    </div>
+                    <div class="header_btn-register" (click)="redirectToRegisterPage()">
+                        <button>Register</button>
+                    </div>
+                </div>
+            </ng-template>
+
+        </div>
+    </div>
+
+    <div class="header_navigate">
+        <nav mat-tab-nav-bar [tabPanel]="tabPanel">
+            <a 
+                *ngFor="let navigation of headerNavigation"
+                [active]="activeLink == navigation.linkPage"
+                mat-tab-link
+                [routerLink]="navigation.linkPage"
+            >
+                {{navigation.linkPage}}
+            </a>
+        </nav>
+        <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+    </div>
+</header>

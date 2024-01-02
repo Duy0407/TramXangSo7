@@ -1,0 +1,19 @@
+.outstanding_item{
+    background: #FFF;
+    width: 96%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.outstanding_item-image{
+    width: 148px;
+    height: 148px;
+}
+.outstanding_item-info{
+    padding: 16px;
+    width: 74%;
+}
+
+.outstanding_restaurant .slick-track{
+    display: flex !important;
+}

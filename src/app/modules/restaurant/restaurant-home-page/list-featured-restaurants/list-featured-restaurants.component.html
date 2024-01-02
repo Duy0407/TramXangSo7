@@ -1,0 +1,22 @@
+<ngx-slick-carousel
+    class="carousel" 
+    [config]="slideOutstanding"
+>
+    <div ngxSlickItem *ngFor="let item of outstanding">
+        <div class="outstanding_item flex">
+            <div class="outstanding_item-image">
+                <img src="/assets/image/restaurant/Item1.png" alt="">
+            </div>
+            <div class="outstanding_item-info flex flex-col justify-between">
+                <div>
+                    <p class="elipsis2 font-bold mb-2">Terraço Sky Bar & Restaurant - Khách sạn La Sinfonía Del Rey Hotel & Spa</p>
+                    <app-reviews [start]="8" [review]="1"></app-reviews>
+                </div>
+                <div class="price text-right">
+                    <p class="text-lg font-bold">50k -650k/người</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</ngx-slick-carousel>
+

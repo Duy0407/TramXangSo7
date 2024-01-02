@@ -1,1 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,800;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root{
+    --main-color: #136397;
+    --error-color: #DB242D;
+    --success-color: #489B1C;
+    --warn-color: #FEB201;
+    --review-count: #605D62;
+    --text-color: #1C1B1E;
+    --error-color-opacity03: #F8D3D5;
+    --warn-color-opacity03: #FFF7E6;
+    --success-color-opacity03: #F0FBE9;
+    --gray-2: #E6E1E6;
+    --gray-4: #AEAAAF;
+}
+.success-color{
+    color: var(--success-color);
+}
+.warn-color{
+    color: var(--warn-color);
+}
+.error-color{
+    color: var(--error-color);
+}
+.elipsis1{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -webkit-line-clamp:1;
+    display:-webkit-box;
+    -webkit-box-orient:vertical
+}
+.error{
+    color: var(--error-color);
+}
+
+.elipsis2{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -webkit-line-clamp:2;
+    display:-webkit-box;
+    -webkit-box-orient:vertical
+}
+
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+p{
+    margin-bottom: unset !important;
+    color: #1C1B1E;
+}
+
+mat-snack-bar-container.mdc-snackbar > .mdc-snackbar__surface  {
+    background: none !important;
+}
+
+.success-snackbar {
+    @apply text-white;
+    background: #00ff2ed4;
+}
+
+.error-snackbar {
+    @apply bg-red-500 text-white;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+}
+
+.icon24{
+    width: 24px;
+    height: 24px;
+}
+
+input{
+    outline: none;
+}
+
+.slick-prev:before, .slick-next:before{
+    content: none !important;
+}
+
+.slick-arrow{
+    width: 36px !important;
+    height: 36px !important;
+}
+
+.slick-next {
+    right: -45px !important;
+}
+.slick-prev {
+    left: -45px !important;
+}
+
+.text-26{
+    font-size: 26px;
+    line-height: 38px;
+}

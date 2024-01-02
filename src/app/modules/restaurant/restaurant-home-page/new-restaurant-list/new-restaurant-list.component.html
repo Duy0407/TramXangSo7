@@ -1,0 +1,60 @@
+<div class="flex flex-wrap">
+    <div class="item" *ngFor="let item of receiveData">
+        <div class="item-image">
+            <img src="{{item.image}}" alt="">
+            <div class="heart_icon icon24">
+                <img src="/assets/image/restaurant/svg/heart.svg" alt="">
+            </div>
+        </div>
+    
+        <div class="item-info flex flex-col gap-2">
+            <div class="item-info-one flex items-center gap-2">
+                <div class="item-category text-xs">Ẩm Thực Đường Phố</div>
+                <div class="national-dish elipsis1">Món Việt, Món Nhật Món Việt, Món Nhật</div>
+            </div>
+    
+            <p class="elipsis2 text-lg font-bold">Terraço Sky Bar & Restaurant - Khách sạn La Sinfonía Del Rey Hotel & Spa</p>
+            
+            <!-- Đánh giá -->
+            <app-reviews [start]="10" [review]="5"></app-reviews>
+            
+            <!-- Địa chỉ -->
+            <div class="item-info-address flex items-start gap-2">
+                <div class="address-icon icon24">
+                    <img src="/assets/image/restaurant/svg/directions.svg" alt="">
+                </div>
+                <div class="address-title elipsis2">
+                    64, Trần Hưng Đạo, Phú Quốc, Kiên Giang, Việt Nam
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2 p-1 rounded-lg w-fit" style="background: var(--warn-color-opacity03);">
+                    <div class="icon24">
+                        <img src="/assets/image/restaurant/svg/food_1.svg" alt="">
+                    </div>
+                    <p style="color: var(--warn-color);">Đặt bàn</p>
+                </div>
+
+                <div class="flex items-center gap-2 p-1 rounded-lg w-fit" style="background: var(--success-color-opacity03);">
+                    <div class="icon24">
+                        <img src="/assets/image/restaurant/svg/delivery.svg" alt="">
+                    </div>
+                    <p style="color: var(--success-color);">Giao món</p>
+                </div>
+
+                <div class="flex items-center gap-2 p-1 rounded-lg w-fit" style="background: var(--error-color-opacity03);">
+                    <div class="icon24">
+                        <img src="/assets/image/restaurant/svg/bag.svg" alt="">
+                    </div>
+                    <p style="color: var(--error-color);">Lấy hàng</p>
+                </div>
+            </div>
+    
+            <div class="text-right">
+                <p class="text-lg font-bold"><span class="text-lg font-bold" style="color: var(--error-color)">50k -650k</span> / người</p>
+            </div>
+        </div>
+    
+    </div>
+</div>

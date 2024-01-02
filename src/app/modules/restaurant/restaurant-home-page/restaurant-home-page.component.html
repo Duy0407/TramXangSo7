@@ -1,0 +1,58 @@
+<div class="main">
+    <app-banner></app-banner>
+    <div class="main_one w-full flex justify-center pb-16">
+        <div class="main_one-content flex flex-col justify-center">
+            <div class="filter w-full mb-16">
+                <app-filter-restaurants></app-filter-restaurants>
+            </div>
+    
+            <div class="slick-category w-full mb-16">
+                <ngx-slick-carousel 
+                    class="carousel" 
+                    [config]="slideCategories"
+                >
+                    <div ngxSlickItem *ngFor="let category of categories" class="width_custome">
+                        <img src="{{category.image}}" alt="">
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+
+            <!-- Nhà hàng nổi bật -->
+            <div class="outstanding_restaurant mb-20">
+                <h2 class="outstanding_restaurant-title mb-10">Nhà hàng nổi bật</h2>
+                
+                <div class="mt-10">
+                    <app-list-featured-restaurants></app-list-featured-restaurants>
+                </div>
+            </div>
+
+            <!-- Nhà hàng mới nhất -->
+            <div class="list_restaurant_new">
+                <h2 class="list_restaurant_new-title">Nhà hàng mới nhất</h2>
+                <div class="mt-10">
+                    <app-new-restaurant-list [receiveData]="listItemRestaurantNew"></app-new-restaurant-list>
+
+                    <div class="flex justify-center">
+                        <div class="see_more flex items-center gap-1">
+                            <div class="see_more-text text-lg font-bold">Xem Thêm</div>
+                            <div class="see_more-icon icon24">
+                                <img src="/assets/image/restaurant/svg/arrow-narrow-right.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nhà hàng đã xem gần đây -->
+    <div class="main_two">
+        <div class="main_two-sub">
+            <h2>Xem gần đây</h2>
+            
+            <div class="mt-10">
+                <app-restaurants-recently-viewed></app-restaurants-recently-viewed>
+            </div>
+        </div>
+    </div>
+</div>
